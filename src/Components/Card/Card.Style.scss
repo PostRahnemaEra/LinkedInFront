@@ -1,0 +1,55 @@
+@import "../../variables/variables.scss";
+.Create_Post {
+    height: auto;
+}
+
+.Post {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.User_Profile {
+    height: auto;
+    background-image: linear-gradient( top, $lightBlue, $lightBlue 45%, transparent 45%, transparent 100%);
+    background-image: -webkit-linear-gradient( top, $lightBlue, $lightBlue 45%, transparent 45%, transparent 100%);
+}
+
+.Connect {
+    margin-top: 24px;
+    height: auto;
+    background-color: $blueGrayColor;
+    font-family: $fontM;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #212121;
+}
+
+.Follow {
+    height: auto;
+    background-color: $blueGrayColor;
+    font-family: $fontM;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #212121;
+    margin-bottom: 16px;
+}
+
+.Tag {
+    position: sticky;
+    top: 36px;
+    align-self: flex-start;
+    height: auto;
+    min-height: 188px;
+    background-color: $blueGrayColor;
+    font-family: $efontM;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #181818;
+}
