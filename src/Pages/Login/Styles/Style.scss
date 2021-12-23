@@ -1,0 +1,57 @@
+@import "../../../Variables/Variables.scss";
+
+.mainBox {
+    font-family: $font;
+    
+}
+
+.form-box {
+    background-color: $grayColor;
+}
+
+.inner-addon {
+    position: relative;
+    }
+
+    /* style glyph */
+    .inner-addon i {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    }
+
+    /* align glyph */
+    .left-addon i  { left:  0px;}
+    
+    /* add padding  */
+    .left-addon input  { padding-left:  30px; }
+    
+    .mainBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+  
+    .f-right {
+        float: right;
+    }
+    
+    .m-l-10 {
+        margin-left: 10px;
+    }
+
+    .d-ltr {
+        direction: ltr;
+    }
+
+    .form-box {
+        border-radius: 10px;
+        min-height: 50vh;
+    }
+    .form-box-small {
+        border-radius: 10px;
+        min-height: 30vh;
+    }
