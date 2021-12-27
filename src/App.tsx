@@ -6,7 +6,7 @@ import { Register } from "./Pages/Register/Register";
 
 export const App = () => {
   return (
-    <div dir="rtl" className="bg-backGroundColor" >
+    <div dir="rtl" >
       <Router>
           <Routes>
             <Route  path="/home" element={<Home />} />
