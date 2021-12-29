@@ -29,10 +29,10 @@ export const Login = () => {
     }
 
     return(
-        <div className="row bg-app font-medium mainBox">
-            <div className="col-xs-12 col-md-4 col-sm-4 bg-white form-box">
-                <div className="row py-5">
-                    <div className="col-12 pt-5 pb-3 text-center">
+        <div className="min-h-screen flex items-center justify-center mainBox">
+            <div className="form-box w-screen md:w-1/3 lg:w-1/3 text-center py-4 rounded-2xl">
+                <div className="p-4">
+                    <div className="pb-4">
                         <h3>ورود</h3>
                     </div>
                     
@@ -60,35 +60,37 @@ export const Login = () => {
                             isSubmitting,
                             /* and other goodies */
                         }) => (
-                    <form onSubmit={handleSubmit} noValidate={true}>
-                        <div className="col-12 py-1 text-center d-ltr">
-                            <div className="inner-addon left-addon">
+                    <form className='mt-5' onSubmit={handleSubmit} noValidate={true}>
+                        <div className="rounded border-2">
+                            <div className="w-full py-1">
                                 <i className="bi bi-envelope"></i>
-                                <input type="text" name="username" className="form-control" placeholder="username" onChange={handleChange} onBlur={handleBlur} value={values.username}/>
+                                <input type="text" name="username" className="text-left w-full" placeholder="username" onChange={handleChange} onBlur={handleBlur} value={values.username}/>
                             </div>
                         </div>
                         {errors.username && touched.username && errors.username}
-                        <div className="col-12 py-1 text-center d-ltr">
-                            <div className="inner-addon left-addon">
+                        <div className="w-full mt-3 ">
+                            <div className="rounded border-2 py-1">
                                 <i className="bi bi-lock"></i>
-                                <input type="password" name="password" className="form-control" placeholder="password" onChange={handleChange} onBlur={handleBlur} value={values.password}/>
+                                <input type="password" name="password" className="text-left w-full" placeholder="password" onChange={handleChange} onBlur={handleBlur} value={values.password}/>
                             </div>
                         </div>
                         {errors.password && touched.password && errors.password}
-                        
-                        <div className="col-12 py-3 text-center" >
-                            <button type="submit" className="btn btn-primary w-100 rounded-pill" disabled={isSubmitting}>
+                        <div className='text-blue'>
+                            <span>فراموشی رمز عبور</span>
+                        </div>
+                        <div className="" >
+                            <button type="submit" className="background-blue text-white w-full rounded" disabled={isSubmitting}>
                                ورود
                             </button>
                         </div>
                     </form>
                     )}
                     </Formik>
-                    <div className="col-12 py-1 text-center" >
-                        <h6 className="text-secondary">عضو نیستم</h6>
+                    <div className="" >
+                        <h6 className="">عضو نیستم</h6>
                     </div>
-                    <div className="col-12 py-3 text-center" >
-                        <button type="button" className="btn btn-outline-primary w-100 rounded-pill" onClick={goToSignUp}>ثبت نام</button>
+                    <div className="" >
+                        <button type="button" className="" onClick={goToSignUp}>ثبت نام</button>
                     </div>
                 
                   
