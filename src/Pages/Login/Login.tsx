@@ -32,7 +32,7 @@ export const Login = () => {
         <div className="min-h-screen flex items-center justify-center mainBox">
             <div className="form-box w-screen md:w-1/3 lg:w-1/3 text-center py-4 rounded-2xl">
                 <div className="p-4">
-                    <div className="pb-4">
+                    <div className="pb-4 mt-12">
                         <h3>ورود</h3>
                     </div>
                     
@@ -75,10 +75,10 @@ export const Login = () => {
                             </div>
                         </div>
                         {errors.password && touched.password && errors.password}
-                        <div className='text-blue'>
+                        <div className='text-blue w-full text-left'>
                             <span>فراموشی رمز عبور</span>
                         </div>
-                        <div className="" >
+                        <div className="mt-7" >
                             <button type="submit" className="background-blue text-white w-full rounded" disabled={isSubmitting}>
                                ورود
                             </button>
@@ -86,11 +86,11 @@ export const Login = () => {
                     </form>
                     )}
                     </Formik>
-                    <div className="" >
+                    <div className="mt-2" >
                         <h6 className="">عضو نیستم</h6>
                     </div>
-                    <div className="" >
-                        <button type="button" className="" onClick={goToSignUp}>ثبت نام</button>
+                    <div className="mt-2" >
+                        <button type="button" className="whiteBtnBlueBorder w-full rounded" onClick={goToSignUp}>ثبت نام</button>
                     </div>
                 
                   

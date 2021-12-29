@@ -16,3 +16,10 @@
 .background-blue {
     background-color: $blueColor;
 }
+
+.whiteBtnBlueBorder {
+
+    background-color: $whiteColor;
+    color: $blueColor;
+    border: 1px solid $blueColor;
+}
