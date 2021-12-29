@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.mainBox {
+  background-color: #828282;
+}
+
+.form-box {
+  background-color: #828282;
+}
+/*# sourceMappingURL=Style.css.map */

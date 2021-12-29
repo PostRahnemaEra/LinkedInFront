@@ -6,6 +6,7 @@ $whiteColor: #ffffff;
 $backGroundColor: #f6f6f6;
 $blueGrayColor: #fcfdfd;
 $lightBlue: #e9f0f8;
+$backgroundAppGray: #E5E5E5;
 $font: "IRANSansWeb";
 $fontB: "IRANSansWebBold";
 $fontL: "IRANSansWebLight";
@@ -17,3 +18,8 @@ $efontL: "Roboto-Light";
 $efontM: "Roboto-Medium";
 $efontR: "Roboto-Regular";
 $efontT: "Roboto-Thin";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  

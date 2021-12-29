@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACoBA,SAAS,CAAT,IAAS;AACT,SAAS,CAAT,UAAS;AACT,SAAS,CAAT,SAAS;ADpBT,AAAA,QAAQ,CAAC;EACL,gBAAgB,ECAR,OAAO;CDElB;;AAED,AAAA,SAAS,CAAC;EACN,gBAAgB,ECLR,OAAO;CDMlB",
+    "sources": [
+        "Style.scss",
+        "../../../Variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "Style.css"
+}
