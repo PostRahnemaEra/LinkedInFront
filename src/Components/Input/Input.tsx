@@ -1,5 +1,6 @@
 import { Field } from "formik";
 import React from "react";
+import "./Input.Style.scss"
 
 interface StringInputProps {
   name: string;

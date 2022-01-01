@@ -4,7 +4,7 @@ import "./Card.Style.scss";
 
 export function Card(props: {
   classname?: string;
-  children?: ReactNode | undefined;
+  children?: ReactNode |undefined;
 }) {
   return (
     <div

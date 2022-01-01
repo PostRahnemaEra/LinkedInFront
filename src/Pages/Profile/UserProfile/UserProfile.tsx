@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import { InitCard } from "../../../Components/InitCard/InitCard";
 import { ChoiceTimeInput, StringInput } from "../../../Components/Input/Input";
 import { Button } from "../../../Components/Button/Button";
+import { Header } from "../../../Components/Header/Header";
 
 const initialValues = {
   firstName: "",
@@ -37,8 +38,9 @@ export const UserProfile = () => {
   return (
     <div className="Card_Container">
       <InitCard>
-        <Formik initialValues={initialValues} onSubmit={onSubmit}>
-          {(formik) => {
+        <>
+          <Header name={"پروفایل"} />
+          <Formik initialValues={initialValues} onSubmit={onSubmit}>
             <Form>
               <StringInput placeholder={"نام"} name={"firstName"} dir={"rtl"} />
               <StringInput
@@ -66,21 +68,9 @@ export const UserProfile = () => {
                 name={"company"}
                 dir={"rtl"}
               />
-              <ChoiceTimeInput name={"تاریخ شروع"} id={"startedAt"} />
-              <ChoiceTimeInput name={"تاریخ پایان"} id={"finishedAt"} />
-              {/*<PictureInput name={"+ اضافه کردن تصویر پروفایل"}/>*/}
-              <Button
-                type="submit"
-                gruop="Primary"
-                lang="fa"
-                size="XXL"
-                disabled={!formik.dirty}
-              >
-                ثبت
-              </Button>
-            </Form>;
-          }}
-        </Formik>
+            </Form>
+          </Formik>
+        </>
       </InitCard>
     </div>
   );

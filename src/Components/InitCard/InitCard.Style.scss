@@ -2,10 +2,7 @@
 .Card_Container {
     min-height: 100vh;
     width: 100vw;
-    //left: 0;
-    //top: 0;
     overflow: hidden;
-    //position: fixed;
     background: $backGroundColor;
     display: flex;
     justify-content: center;
@@ -13,14 +10,11 @@
 }
 
 .Initial_Card_Pages {
-    //margin-top: 20px;
-    //min-height: 75%;
     min-height: 743px;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 0 50px 22.5px 50px;
     width: 498px;
-    //height: auto;
     background: $whiteColor;
     border-radius: 0 24px 24px 0;
     display: flex;
