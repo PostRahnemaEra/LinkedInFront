@@ -1,6 +1,5 @@
 @import "./src/variables/variables.scss";
 .String_Input {
-    //width: 75%;
     align-items: center;
     margin-top: 30px;
 }
@@ -19,3 +18,77 @@
     font-weight: 400;
     transition: all 0.3s ease;
 }
+
+//  ----------------------------------- Time INPUT
+.time_input {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_time_title {
+    color: $grayColor;
+    font-family: $fontM;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 7px;
+    //text-align: center;
+}
+
+.choice_input .field_choice_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 5px;
+    height: 40px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: $grayColor;
+    background-color: $whiteColor;
+    background-image: url(../../Icons/down-arrow.svg), -webkit-linear-gradient(top, $whiteColor, $whiteColor);
+    /* For Chrome and Safari */
+    background-image: url(../../Icons/down-arrow.svg), -moz-linear-gradient(top, $whiteColor, $whiteColor);
+    /* For old Firefox (3.6 to 15) */
+    background-image: url(../../Icons/down-arrow.svg), -ms-linear-gradient(top, $whiteColor, $whiteColor);
+    /* For pre-releases of Internet Explorer  10*/
+    background-image: url(../../Icons/down-arrow.svg), -o-linear-gradient(top, $whiteColor, $whiteColor);
+    /* For old Opera (11.1 to 12.0) */
+    background-image: url(../../Icons/down-arrow.svg), linear-gradient(to bottom, $whiteColor, $whiteColor);
+    /* Standard syntax; must be last */
+    background-size: 20px;
+    background-position: center left;
+    background-position-x: 3px;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.choice_input .input_time_month {
+    width: 162px;
+    font-family: $fontM;
+}
+
+.choice_input .input_time_year {
+    width: 88px;
+    font-family: $fontM;
+}
+
+//  ----------------------------------- FOCUS
+.password_input:focus-within i {
+    color: $blueColor;
+}
+
+.email_input:focus-within i {
+    color: $blueColor;
+}
+
+input:focus {
+    border-color: $blueColor;
+}
+
+.eyeIcon {
+    cursor: pointer;
+}
+
+//  ----------------------------------- MEDIA
