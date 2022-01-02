@@ -67,10 +67,7 @@ export const UserProfile = () => {
               name={"company"}
               dir={"rtl"}
             />
-            <EmailInput />
-            <PassInput/>
-            <CheckBoxInput name={"اکانت شرکتی"}/>
-            <PictureInput name="test"/>
+            {/* <PictureInput name="test"/> */}
             <ChoiceTimeInput name={"تاریخ شروع"} id={"startedAt"}  />
             <ChoiceTimeInput name={"تاریخ پایان"} id={"finishedAt"} />
             <div className="my-8 mx-auto">
