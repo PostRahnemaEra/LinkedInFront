@@ -51,6 +51,54 @@
     transition: all 0.3s ease;
 }
 
+//  -----------------------------------  PASSWORD INPUT
+.password_input {
+    //height: 40px;
+    //width: 75%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    //border: 1px solid #61dafb;
+    //margin: 10px auto;
+    margin: 10px auto;
+    //display: flex;
+}
+
+.password_input .eyeIcon {
+    right: 0;
+    padding-right: 12px;
+    position: absolute;
+    font-size: 15px;
+    color: $grayColor;
+}
+
+.password_input .lockIcon {
+    //height: 100%;
+    //text-align: center;
+    left: 0;
+    padding: 3px;
+    position: absolute;
+    font-size: 20px;
+    color: $grayColor;
+    //color: $blueColor;
+}
+
+.password_input input {
+    padding-left: 40px;
+    height: 45px;
+    //height: 100%;
+    width: 100%;
+    outline: none;
+    text-align: left;
+    border: 1px solid #D0D0D0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
 //  ----------------------------------- Time INPUT
 .time_input {
     margin-top: 25px;

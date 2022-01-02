@@ -1,9 +1,11 @@
 import { Field } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import "./Input.Style.scss";
 import Select from "react-select";
-import EmailSVG from "../../Icons/Email.svg"
-
+import EmailSVG from "../../Icons/Email.svg";
+import PassSVG from "../../Icons/Password.svg";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 
 interface StringInputProps {
   name: string;
@@ -29,7 +31,7 @@ export const EmailInput = () => {
   return (
     <div className={"email_input"}>
       <i className="mx-2">
-        <img src={EmailSVG} alt=""/>
+        <img src={EmailSVG} alt="" />
       </i>
 
       <Field
@@ -39,6 +41,40 @@ export const EmailInput = () => {
         id={"email"}
         name={"email"}
       />
+    </div>
+  );
+};
+
+const usePasswordToggle = () => {
+  const [visible, setVisibility] = useState(false);
+  const Icon = (
+    // visible?<img src={EyeSVG} alt=""/> : <p>hi</p>
+    <FontAwesomeIcon
+      icon={visible ? faEye : faEyeSlash}
+      onClick={() => setVisibility((visible) => !visible)}
+    ></FontAwesomeIcon>
+  );
+  const InputType = visible ? "text" : "password";
+  return [InputType, Icon];
+};
+export const PassInput = () => {
+  const [PasswordInputType, ToggleIcon] = usePasswordToggle();
+
+  return (
+    <div className={"password_input"}>
+      <i className="mx-2 lockIcon">
+        <img src={PassSVG} alt="" />
+      </i>
+
+      <Field
+        type={PasswordInputType}
+        dir={"ltr"}
+        placeholder={"Password"}
+        id={"password"}
+        name={"password"}
+      />
+
+      <i className="eyeIcon">{ToggleIcon}</i>
     </div>
   );
 };
