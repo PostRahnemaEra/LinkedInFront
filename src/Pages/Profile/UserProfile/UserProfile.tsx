@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import { InitCard } from "../../../Components/InitCard/InitCard";
-import { ChoiceTimeInput, EmailInput, PassInput, StringInput } from "../../../Components/Input/Input";
+import { CheckBoxInput, ChoiceTimeInput, EmailInput, PassInput, PictureInput, StringInput } from "../../../Components/Input/Input";
 import { Button } from "../../../Components/Button/Button";
 import { Header } from "../../../Components/Header/Header";
 
@@ -69,6 +69,8 @@ export const UserProfile = () => {
             />
             <EmailInput />
             <PassInput/>
+            <CheckBoxInput name={"اکانت شرکتی"}/>
+            <PictureInput name="test"/>
             <ChoiceTimeInput name={"تاریخ شروع"} id={"startedAt"}  />
             <ChoiceTimeInput name={"تاریخ پایان"} id={"finishedAt"} />
             <div className="my-8 mx-auto">

@@ -2,10 +2,9 @@ import { Field } from "formik";
 import React, { useState } from "react";
 import "./Input.Style.scss";
 import Select from "react-select";
-import EmailSVG from "../../Icons/Email.svg";
-import PassSVG from "../../Icons/Password.svg";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 
 interface StringInputProps {
   name: string;
@@ -31,7 +30,7 @@ export const EmailInput = () => {
   return (
     <div className={"email_input"}>
       <i className="mx-2">
-        <img src={EmailSVG} alt="" />
+        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
       </i>
 
       <Field
@@ -48,7 +47,6 @@ export const EmailInput = () => {
 const usePasswordToggle = () => {
   const [visible, setVisibility] = useState(false);
   const Icon = (
-    // visible?<img src={EyeSVG} alt=""/> : <p>hi</p>
     <FontAwesomeIcon
       icon={visible ? faEye : faEyeSlash}
       onClick={() => setVisibility((visible) => !visible)}
@@ -63,7 +61,7 @@ export const PassInput = () => {
   return (
     <div className={"password_input"}>
       <i className="mx-2 lockIcon">
-        <img src={PassSVG} alt="" />
+        <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
       </i>
 
       <Field
@@ -120,6 +118,25 @@ export const ChoiceTimeInput = (props: { name: string; id: string }) => {
       <span className={"input_time_title"}>{props.name}</span>
       <ChoiceMonthInput name={props.id + "Month"} />
       <ChoiceYearInput name={props.id + "Year"} />
+    </div>
+  );
+};
+
+export const CheckBoxInput = (props:{ name:string}) => {
+  return (
+    <div className={"checkbox_input"}>
+      <label htmlFor={"is_vendor"}>
+        <Field type="checkbox" id={"is_vendor"} name={"is_vendor"} />
+        <span>{props.name}</span>
+      </label>
+    </div>
+  );
+};
+
+export const PictureInput = (props: { name: string }) => {
+  return (
+    <div className={"file_input"}>
+      <Field type={"file"} name={"user_picture"} />
     </div>
   );
 };

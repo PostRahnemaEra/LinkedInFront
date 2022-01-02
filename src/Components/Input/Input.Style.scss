@@ -99,6 +99,53 @@
     transition: all 0.3s ease;
 }
 
+//  ----------------------------------- CHECK BOX
+.checkbox_input label {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15px;
+}
+
+.checkbox_input input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 29px;
+    height: 29px;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+}
+
+.checkbox_input input[type=checkbox]:checked {
+    background-color: $blueColor;
+}
+
+input[type=checkbox]:checked:after {
+    margin-right: 7px;
+    margin-top: 1px;
+    width: 3mm;
+    height: 5mm;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    display: inline-block;
+}
+
+.checkbox_input span {
+    color: $grayColor;
+    font-family: $fontM;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 20px;
+    margin-top: 7px;
+}
+
 //  ----------------------------------- Time INPUT
 .time_input {
     margin-top: 25px;
