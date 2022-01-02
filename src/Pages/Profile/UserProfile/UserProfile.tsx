@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import { InitCard } from "../../../Components/InitCard/InitCard";
-import { ChoiceTimeInput, StringInput } from "../../../Components/Input/Input";
+import { ChoiceTimeInput, EmailInput, StringInput } from "../../../Components/Input/Input";
 import { Button } from "../../../Components/Button/Button";
 import { Header } from "../../../Components/Header/Header";
 
@@ -67,6 +67,7 @@ export const UserProfile = () => {
               name={"company"}
               dir={"rtl"}
             />
+            <EmailInput />
             <ChoiceTimeInput name={"تاریخ شروع"} id={"startedAt"}  />
             <ChoiceTimeInput name={"تاریخ پایان"} id={"finishedAt"} />
             <div className="my-8 mx-auto">

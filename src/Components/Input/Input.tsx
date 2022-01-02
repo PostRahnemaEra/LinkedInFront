@@ -2,6 +2,8 @@ import { Field } from "formik";
 import React from "react";
 import "./Input.Style.scss";
 import Select from "react-select";
+import EmailSVG from "../../Icons/Email.svg"
+
 
 interface StringInputProps {
   name: string;
@@ -23,15 +25,32 @@ export const StringInput = (props: StringInputProps) => {
   );
 };
 
+export const EmailInput = () => {
+  return (
+    <div className={"email_input"}>
+      <i className="mx-2">
+        <img src={EmailSVG} alt=""/>
+      </i>
+
+      <Field
+        type="text"
+        dir={"ltr"}
+        placeholder={"Email"}
+        id={"email"}
+        name={"email"}
+      />
+    </div>
+  );
+};
 
 const ChoiceYearInput = (props: { name: string }) => {
   const years = [];
   for (let year = 1340; year < 1400; year++) {
-    years.push({ value: `${ year }`, label: `${ year }`});
+    years.push({ value: `${year}`, label: `${year}` });
   }
   console.log(years);
   return (
-    <div className={"choice_input input_time_year"}>
+    <div>
       <Select name={props.name} options={years} placeholder="سال" />
     </div>
   );
@@ -39,21 +58,21 @@ const ChoiceYearInput = (props: { name: string }) => {
 
 const ChoiceMonthInput = (props: { name: string }) => {
   const months = [
-    { value: 'فروردین', label: 'فروردین' },
-    { value: 'اردیبهشت', label: 'اردیبهشت' },
-    { value: 'خرداد', label: 'خرداد' },
-    { value: 'تیر', label: 'تیر' },
-    { value: 'مرداد', label: 'مرداد' },
-    { value: 'شهریور', label: 'شهریور' },
-    { value: 'مهر', label: 'مهر' },
-    { value: 'آبان', label: 'آبان' },
-    { value: 'آذر', label: 'آذر' },
-    { value: 'دی', label: 'دی' },
-    { value: 'بهمن', label: 'بهمن' },
-    { value: 'اسفند', label: 'اسفند' }
-  ]
+    { value: "فروردین", label: "فروردین" },
+    { value: "اردیبهشت", label: "اردیبهشت" },
+    { value: "خرداد", label: "خرداد" },
+    { value: "تیر", label: "تیر" },
+    { value: "مرداد", label: "مرداد" },
+    { value: "شهریور", label: "شهریور" },
+    { value: "مهر", label: "مهر" },
+    { value: "آبان", label: "آبان" },
+    { value: "آذر", label: "آذر" },
+    { value: "دی", label: "دی" },
+    { value: "بهمن", label: "بهمن" },
+    { value: "اسفند", label: "اسفند" },
+  ];
   return (
-    <div className={"choice_input input_time_month"}>
+    <div>
       <Select name={props.name} options={months} placeholder="ماه" />
     </div>
   );

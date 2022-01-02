@@ -19,6 +19,38 @@
     transition: all 0.3s ease;
 }
 
+// Email Input
+.email_input {
+    //width: 75%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin: 15px auto;
+}
+
+.email_input i {
+    left: 0;
+    padding: 3px;
+    position: absolute;
+    font-size: 20px;
+    color: $grayColor;
+}
+
+.email_input input {
+    padding-left: 40px;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    text-align: left;
+    border: 1px solid #D0D0D0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
 //  ----------------------------------- Time INPUT
 .time_input {
     margin-top: 25px;
@@ -33,45 +65,6 @@
     font-size: 16px;
     padding-top: 7px;
     //text-align: center;
-}
-
-.choice_input .field_choice_input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-right: 5px;
-    height: 40px;
-    border: 1px solid #D0D0D0;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    color: $grayColor;
-    background-color: $whiteColor;
-    background-image: url(../../Icons/down-arrow.svg), -webkit-linear-gradient(top, $whiteColor, $whiteColor);
-    /* For Chrome and Safari */
-    background-image: url(../../Icons/down-arrow.svg), -moz-linear-gradient(top, $whiteColor, $whiteColor);
-    /* For old Firefox (3.6 to 15) */
-    background-image: url(../../Icons/down-arrow.svg), -ms-linear-gradient(top, $whiteColor, $whiteColor);
-    /* For pre-releases of Internet Explorer  10*/
-    background-image: url(../../Icons/down-arrow.svg), -o-linear-gradient(top, $whiteColor, $whiteColor);
-    /* For old Opera (11.1 to 12.0) */
-    background-image: url(../../Icons/down-arrow.svg), linear-gradient(to bottom, $whiteColor, $whiteColor);
-    /* Standard syntax; must be last */
-    background-size: 20px;
-    background-position: center left;
-    background-position-x: 3px;
-    background-repeat: no-repeat;
-    outline: none;
-}
-
-.choice_input .input_time_month {
-    width: 162px;
-    font-family: $fontM;
-}
-
-.choice_input .input_time_year {
-    width: 88px;
-    font-family: $fontM;
 }
 
 //  ----------------------------------- FOCUS
