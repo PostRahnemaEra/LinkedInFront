@@ -1,9 +1,12 @@
 import React from 'react'
+import { CardContainerWithFollow } from '../../Components/Card/CardContainer'
 
 export const Home = () => {
     return (
         <div>
-            Hi Home
+            <CardContainerWithFollow >
+
+            </CardContainerWithFollow>
         </div>
     )
 }
