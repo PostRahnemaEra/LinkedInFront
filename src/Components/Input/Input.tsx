@@ -84,7 +84,7 @@ const ChoiceYearInput = (props: { name: string }) => {
   }
   console.log(years);
   return (
-    <div>
+    <div className="w-1/4 input_time_date">
       <Select name={props.name} options={years} placeholder="سال" />
     </div>
   );
@@ -106,7 +106,7 @@ const ChoiceMonthInput = (props: { name: string }) => {
     { value: "اسفند", label: "اسفند" },
   ];
   return (
-    <div>
+    <div className="w-2/4 px-7 input_time_date">
       <Select name={props.name} options={months} placeholder="ماه" />
     </div>
   );
@@ -115,7 +115,7 @@ const ChoiceMonthInput = (props: { name: string }) => {
 export const ChoiceTimeInput = (props: { name: string; id: string }) => {
   return (
     <div className={"time_input"}>
-      <span className={"input_time_title"}>{props.name}</span>
+      <span className={"input_time_title w-1/4"}>{props.name}</span>
       <ChoiceMonthInput name={props.id + "Month"} />
       <ChoiceYearInput name={props.id + "Year"} />
     </div>
