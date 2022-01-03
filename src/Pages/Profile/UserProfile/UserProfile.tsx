@@ -74,6 +74,7 @@ export const UserProfile = () => {
             {/* <PictureInput name="test"/> */}
             <ChoiceTimeInput name={"تاریخ شروع"} id={"startedAt"} />
             <ChoiceTimeInput name={"تاریخ پایان"} id={"finishedAt"} />
+            <PictureInput/>
             <div className="my-8">
               <Button type="submit" gruop="Secondary" lang="fa" size="XXL">
                 ثبت

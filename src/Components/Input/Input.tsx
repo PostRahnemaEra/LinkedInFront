@@ -4,7 +4,7 @@ import "./Input.Style.scss";
 import Select from "react-select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 interface StringInputProps {
   name: string;
@@ -122,7 +122,7 @@ export const ChoiceTimeInput = (props: { name: string; id: string }) => {
   );
 };
 
-export const CheckBoxInput = (props:{ name:string}) => {
+export const CheckBoxInput = (props: { name: string }) => {
   return (
     <div className={"checkbox_input"}>
       <label htmlFor={"is_vendor"}>
@@ -133,10 +133,16 @@ export const CheckBoxInput = (props:{ name:string}) => {
   );
 };
 
-export const PictureInput = (props: { name: string }) => {
+export const PictureInput = () => {
   return (
-    <div className={"file_input"}>
-      <Field type={"file"} name={"user_picture"} />
+    <div className="flex">
+      <div className={"file_input"} />
+      <div className="mt-12">
+        <label className=" file_input_label">
+          <span>+ اضافه کردن تصویر پروفایل </span>
+          <input type={"file"} name={"user_picture"} className="hidden" />
+        </label>
+      </div>
     </div>
   );
 };
