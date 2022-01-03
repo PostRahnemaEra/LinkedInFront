@@ -71,7 +71,6 @@ export const UserProfile = () => {
               name={"company"}
               dir={"rtl"}
             />
-            {/* <PictureInput name="test"/> */}
             <ChoiceTimeInput name={"تاریخ شروع"} id={"startedAt"} />
             <ChoiceTimeInput name={"تاریخ پایان"} id={"finishedAt"} />
             <PictureInput/>
