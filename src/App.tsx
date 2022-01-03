@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CompanyProfilePage } from "./Pages/CompanyProfilePage/CompanyProfilePage";
 import { Home } from "./Pages/Home/Home";
 import { Login } from "./Pages/Login/Login";
+//import { UserProfile } from "./Pages/Profile/UserProfile/UserProfile";
 import { Register } from "./Pages/Register/Register";
 
 export const App = () => {
   return (
-    <div dir="rtl" className="bg-backGroundColor" >
+    <div dir="rtl" >
       <Router>
           <Routes>
             <Route  path="/home" element={<Home />} />

@@ -1,0 +1,35 @@
+@import "./src/variables/variables.scss";
+.Card_Container {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: $backGroundColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Initial_Card_Pages {
+    min-height: 743px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 50px 0 50px;
+    width: 498px;
+    background: $whiteColor;
+    border-radius: 0 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+///* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 498px) {
+    .Initial_Card_Pages {
+        min-height: 100vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
