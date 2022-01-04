@@ -1,8 +1,12 @@
 import { useEffect } from 'react';
-import { Formik } from 'formik';
-import './Styles/Style.css';
+import { Form, Formik } from 'formik';
+import './Styles/Style.scss';
 import { useNavigate } from 'react-router-dom';
-
+import { StringInput } from '../../Components/Input/Input';
+import { Button } from '../../Components/Button/Button';
+import { InitCard } from '../../Components/InitCard/InitCard';
+import * as Yup from 'yup';
+import { Header } from '../../Components/Header/Header';
 
 
 type CreateCompanyProfileRequest = {
@@ -26,52 +30,44 @@ export const CompanyProfilePage = () => {
     
     }
 
+    const validation = Yup.object().shape({
+        name: Yup.string()
+        .required('Required'),
+        description: Yup.string()
+        .max(40, 'حداکثر 40 کاراکتر')
+        .required('Required'),
+    });
+
+    const initVal : CreateCompanyProfileRequest = {name: '', description: ''}
     return(
-        <div className="min-h-screen flex items-center justify-center mainBox">
-            <div className="form-box w-screen md:w-1/3 lg:w-1/3 text-center py-4 rounded-2xl">
-                <div className="p-4">
-                    <div className="pb-10 mt-12">
-                        <h3>پروفایل</h3>
-                    </div>
-                    
-                    <Formik
-                        initialValues={{ name: '', description: '' } as CreateCompanyProfileRequest}
-                        validate={values => {
-                            const errors: any = {};
-                            
-                            return errors;
-                        }}
-                        onSubmit={(values, { setSubmitting }) => {setProfileSubmit(values, setSubmitting)}}
-                        >
-                        {({
-                            values,
-                            errors,
-                            touched,
-                            handleChange,
-                            handleBlur,
-                            handleSubmit,
-                            isSubmitting,
-                            /* and other goodies */
+        <div>
+            <InitCard>
+                {Header({name: 'پروفایل شرکت'})}
+                <Formik
+                    initialValues={initVal}
+                    validationSchema={validation}
+                    onSubmit={setProfileSubmit}
+                    >
+                    {({
+                        errors,
+                        touched,
+                        isSubmitting,
+                        /* and other goodies */
                         }) => (
-                    <form className='mt-12' onSubmit={handleSubmit} noValidate={true}>
-                        <div className="rounded border-2">
-                            <div className="w-full py-1">
-                                <i className="bi bi-envelope"></i>
-                                <input type="text" name="name" className="text-left w-full" placeholder="نام" onChange={handleChange} onBlur={handleBlur} value={values.name}/>
-                            </div>
-                        </div>
-                        
-                        <div className="mt-10" >
-                            <button type="submit" className="background-blue text-white w-full rounded" disabled={isSubmitting}>
-                               ثبت
-                            </button>
-                        </div>
-                    </form>
-                    )}
-                    </Formik>
-                    
-                </div>
-            </div>
+                            <Form>
+                                {StringInput({dir: 'rtl', name: 'name', placeholder:  'نام شرکت'})}
+                                {errors.name && touched.name && errors.name}
+                                {StringInput({dir: 'rtl', name: 'description', placeholder:  'توضیح'})}
+                                {errors.description && touched.description && errors.description}
+                                <div className='w-full text-center mt-12'>
+                                    {Button({lang: 'fa', size: 'XXL', disabled: isSubmitting, type: 'submit', children: 'ثبت', gruop: 'Primary'})} 
+                                </div>
+                                
+                                
+                            </Form>
+                        )}
+                </Formik>
+            </InitCard>
         </div>
     );
 }
