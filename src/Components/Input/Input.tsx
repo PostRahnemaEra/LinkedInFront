@@ -4,7 +4,7 @@ import "./Input.Style.scss";
 import Select from "react-select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 interface StringInputProps {
   name: string;
@@ -84,7 +84,7 @@ const ChoiceYearInput = (props: { name: string }) => {
   }
   console.log(years);
   return (
-    <div>
+    <div className="w-1/4 input_time_date">
       <Select name={props.name} options={years} placeholder="سال" />
     </div>
   );
@@ -106,7 +106,7 @@ const ChoiceMonthInput = (props: { name: string }) => {
     { value: "اسفند", label: "اسفند" },
   ];
   return (
-    <div>
+    <div className="w-2/4 px-7 input_time_date">
       <Select name={props.name} options={months} placeholder="ماه" />
     </div>
   );
@@ -115,14 +115,14 @@ const ChoiceMonthInput = (props: { name: string }) => {
 export const ChoiceTimeInput = (props: { name: string; id: string }) => {
   return (
     <div className={"time_input"}>
-      <span className={"input_time_title"}>{props.name}</span>
+      <span className={"input_time_title w-1/4"}>{props.name}</span>
       <ChoiceMonthInput name={props.id + "Month"} />
       <ChoiceYearInput name={props.id + "Year"} />
     </div>
   );
 };
 
-export const CheckBoxInput = (props:{ name:string}) => {
+export const CheckBoxInput = (props: { name: string }) => {
   return (
     <div className={"checkbox_input"}>
       <label htmlFor={"is_vendor"}>
@@ -133,10 +133,16 @@ export const CheckBoxInput = (props:{ name:string}) => {
   );
 };
 
-export const PictureInput = (props: { name: string }) => {
+export const PictureInput = () => {
   return (
-    <div className={"file_input"}>
-      <Field type={"file"} name={"user_picture"} />
+    <div className="flex">
+      <div className={"file_input"} />
+      <div className="mt-12">
+        <label className=" file_input_label">
+          <span>+ اضافه کردن تصویر پروفایل </span>
+          <input type={"file"} name={"user_picture"} className="hidden" />
+        </label>
+      </div>
     </div>
   );
 };
